@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> Upload Page </title>
+        <link rel="stylesheet" href= {{ url_for('static', filename = 'css/style.css') }}>
+        <!-- <style>
+        .bodytop
+        {
+            background-color: teal;
+        }
+        ul 
+        {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
+        }
+        li 
+        {
+            float: left;
+        }
+        li a 
+        {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover 
+        {
+            background-color: #111;
+        }
+        .active 
+        {
+            background-color: #4CAF50;
+        }
+        .topnav
+        {
+            background-color: lightblue;
+            float: none;
+            width: 100%;
+        }
+        .button 
+        {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            border-radius: 12px;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s; /* Safari */
+            transition-duration: 0.4s;
+        }
+        .button2:hover 
+        {
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+        </style> -->
+    </head>
+    
+    <body>
+        <form action="/upload" method="post" enctype = multipart/form-data>
+        <div align ="center" class="bodytop">
+            <br>
+            <h1>Resume Screening</h1> 
+            <h3>ODA Test</h3>
+            <br>
+        </div>
+
+        <ul>
+            <li><a href="/" target="_self">Home</a></li>
+            <li><a href="/upload" target="_self">Upload</a></li>
+            <li style="float:right"><a class="active" href="/logout" target="_self">Logout</a></li>
+          </ul>
+        
+        <div class="col">
+            <h3> Please Upload the Document </h3>
+            <!-- <div align = "right"><input type="submit" value="Logout"></div> -->
+            <input type="file" name="file" />
+            <button class="button button2" type="submit">Submit</button><br><br><br><br><br><br><br><br>
+
+            <p>
+                JOB Description !!! <br>
+
+                Required skillset and experience <br>
+                Skillset and experience requirements are as follows. <br>
+                •	Good programming basics (any computer language including Java, C, Python or any other language).<br>
+                •	Very good verbal and written communication skills.<br>
+                •	Good analytical ability.<br>
+                •	Computer engineering graduate from reputed colleges.<br>
+                •	0 – 2 years of experience.<br>
+                •	Self-driven projects is not mandatory but is a definitive plus. This may include publishing of own website, <br>
+                    App on Google PlayStore or AppStore, any other project including hardware software interface, IoT etc.
+
+            </p>
+        </div>
+        
+        <div class="footer">
+            <h2> ODA </h2>
+        </div> 
+        </form>
+         <p>
+            {{message}}
+            <!-- {% with messages = get_flashed_messages() %}
+                {% if message %}
+                    {% for message in messages %}
+                        <h3>{{message}}</h3>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %} -->
+        </p>
+    </body>
+</html>
